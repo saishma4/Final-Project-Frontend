@@ -1,3 +1,41 @@
-.container{
-    background-color:black ;
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+  .register-container > form {
+    width: 70%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 5px 5px 10px  #5885AF;;
+    border-radius: 10px;
+  }
+  
+  .signup-button {
+    background:#5885AF;
+    float: right;
+    border:none;
+    border-radius: 10%;
+    padding: 4px;
+    font-size: large;
+    color:#fff;
+    margin: 5%;
+    
+  }
+  label{
+    color:#5885AF;
+    /* color: #00adb5; */
+    font-size: large;
+  }
+
+  #changepassword{
+    float: left;
+  }
+input{
+    width: 100%;
 }
