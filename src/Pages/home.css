@@ -1,0 +1,41 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+}
+h1{
+    color: #e81a30;
+    text-align: center;
+    margin: 10px;
+    font-family: cursive;
+    font-size: 25px;
+    background-color: aliceblue;
+}
+img{
+    box-shadow: 5px 5px 10px #222049;
+
+    height: 45vh;
+    max-width: 100%;
+}
+
+.first-container{
+    background-image: url('../Images/doll10.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-blend-mode: soft-light;
+    background-clip: border-box;
+    background-origin: border-box;
+    height: 80vh;
+    min-width: 100%;
+
+}
+body{
+    background-color: aliceblue;
+}
