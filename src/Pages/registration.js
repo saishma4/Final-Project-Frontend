@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet, Link, useNavigate } from "react-router-dom";
+import './registration.css'
 
 const Register = () => {
     const [data, setData] =useState({ 
@@ -26,7 +27,7 @@ const Register = () => {
     }
     const { username, password, email, confirmPassword } = data;
     return (
-        <div className='container'>
+        <div className='register-container'>
             <form >
                 <h1>SignUp</h1>
                 <label>Username</label>
@@ -46,7 +47,7 @@ const Register = () => {
                 <input type="password" name="confirmPassword" placeholder='confirm password' value={confirmPassword} onChange={changeHandler} />
                 <br />
                 <p>Already Have an Account <Link to="/login" >Login</Link></p>
-                <button onClick={submitHandler}>Submit</button>
+                <button class="signup-button" onClick={submitHandler}>SignUp</button>
                 <br />
             </form>
         </div >
