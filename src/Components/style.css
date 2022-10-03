@@ -6,14 +6,14 @@ body{
 }
 
 .nav{
-    background-color:#e81a30;
+    background-color:#D3D3D3;
     display: flex;
     justify-content: space-between;
     align-items: stretch;  
 }
 
 .site-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
 
 }
 
@@ -23,14 +23,14 @@ body{
     list-style: none;
     display: flex;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .nav a{
-    color: white;
+    color: #e81a30;
     text-decoration: none;
     align-items: center;
     padding: 1rem;
-
+    padding-bottom: 0;
 }
 .footer-container{
     background-color: #D3D3D3;
@@ -58,8 +58,12 @@ body{
     padding: 1rem;
     color: #e81a30;
 }
-img{
-    height: 5vh;
+.logo img{
+    height: 10vh;
+
+}
+.logo{
+    display: flex;
 }
 .footer-container h3{
     list-style: none;
