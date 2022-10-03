@@ -9,7 +9,7 @@
     margin-bottom: 10%;
     
 }
-h1{
+.container h1{
     color: #e81a30;
     text-align: center;
     margin: 10px;
@@ -17,7 +17,7 @@ h1{
     font-size: 25px;
     background-color: aliceblue;
 }
-img{
+.flex-container img{
     box-shadow: 5px 5px 10px #222049;
 
     height: 45vh;
@@ -25,17 +25,28 @@ img{
 }
 
 .first-container{
-    background-image: url('../Images/doll10.png');
+    background-image: url('../Images/backgroundOne.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-blend-mode: soft-light;
     background-clip: border-box;
     background-origin: border-box;
-    height: 80vh;
+    height: 100vh;
     min-width: 100%;
 
 }
 body{
     background-color: aliceblue;
+}
+.flex-container button{
+    background-color: #D3D3D3;
+    color: #e81a30;
+    border: none;
+    border-radius: 5%;
+    padding: 10px;
+    font-size: 1rem;
+}
+.flex-container h3{
+    color: #222049;
 }
