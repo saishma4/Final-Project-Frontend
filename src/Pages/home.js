@@ -1,14 +1,15 @@
 import React from "react";
-import './home.css'
+
 import doll1 from '../Images/doll1.png';
 import doll2 from '../Images/doll2.png';
 import doll3 from '../Images/doll3.png';
+import './home.css'
 
 const Home = () => {
     return(
         <>
         <div className="container">
-        <h1>Discover One-of-a-Kind Dolls</h1>
+        <h1 class="slogan">Discover One-of-a-Kind Dolls</h1>
             <div className="first-container">
             </div>
             
