@@ -1,3 +1,4 @@
+
 .register-container {
     display: flex;
     flex-direction: column;
@@ -12,12 +13,12 @@
     width: 70%;
     padding: 20px;
     background: #fff;
-    box-shadow: 5px 5px 10px  #5885AF;;
+    box-shadow: 5px 5px 10px  #222049;
     border-radius: 10px;
   }
   
   .signup-button {
-    background:#5885AF;
+    background:#222049;;
     float: right;
     border:none;
     border-radius: 10%;
@@ -28,7 +29,7 @@
     
   }
   label{
-    color:#5885AF;
+    color:#222049;;
     /* color: #00adb5; */
     font-size: large;
   }
@@ -38,4 +39,7 @@
   }
 input{
     width: 100%;
+}
+.register-container h1{
+    color:#222049; 
 }
