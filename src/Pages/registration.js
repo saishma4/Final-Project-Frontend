@@ -1,34 +1,58 @@
 import React, { useState } from 'react'
 import { Outlet, Link, useNavigate } from "react-router-dom";
-import './registration.css'
+import './registration.css';
+import axios from 'axios';
 
 const Register = () => {
+    const navigate = useNavigate()
     const [data, setData] =useState({ 
         username:"", 
         password:"", 
         email:"",
-        confirmPassword:"" 
+        confirmpassword:"" 
     })
     
     const changeHandler = (e) => {
         setData({ ...data, [e.target.name]: e.target.value })
     }
-    const navigate = useNavigate()
-    const submitHandler = (e) => {
-        e.preventDefault()// to prevent anything pending
-        if (password !== confirmPassword) {
-            alert("mismatch of password and confirmPassword")
-        }
-        else {
-            console.log(data)
-            //document.write(" Registration succesfull")
-            navigate('/login')
-        }
+   
+    // const submitHandler = (e) => {
+    //     e.preventDefault()// to prevent anything pending
+    //     if (password !== confirmPassword) {
+    //         alert("mismatch of password and confirmPassword")
+    //     }
+    //     else {
+    //         console.log(data)
+    //         //document.write(" Registration succesfull")
+    //         navigate('/login')
+    //     }
+    // }
+    const { username, password, email, confirmpassword } = data;
+    const submitHandler = e => {
+        e.preventDefault();
+        addDataToServer(data)
     }
-    const { username, password, email, confirmPassword } = data;
+    console.log(data);
+    const addDataToServer = (cred) => {
+        console.log(cred);
+        axios.post("http://localhost:8080/api/auth/registration", cred).then(
+            (response) => {
+                
+                console.log(response);
+                alert("user Added Successfully");
+                if (response.status==200) {
+                    console.log("navigating");
+                    navigate('/login');
+                }
+            }, (error) => {
+                console.log(error);
+                alert("Operation failed");
+            }
+        );
+    }
     return (
         <div className='register-container'>
-            <form >
+            <form onSubmit={submitHandler} >
                 <h1>SignUp</h1>
                 <label>Username</label>
                 <br />
@@ -44,10 +68,10 @@ const Register = () => {
                 <br />
                 <label>Confirm Password</label>
                 <br />
-                <input type="password" name="confirmPassword" placeholder='confirm password' value={confirmPassword} onChange={changeHandler} />
+                <input type="password" name="confirmpassword" placeholder='confirm password' value={confirmpassword} onChange={changeHandler} />
                 <br />
                 <p>Already Have an Account <Link to="/login" >Login</Link></p>
-                <button class="signup-button" onClick={submitHandler}>SignUp</button>
+                <button class="signup-button">SignUp</button>
                 <br />
             </form>
         </div >
