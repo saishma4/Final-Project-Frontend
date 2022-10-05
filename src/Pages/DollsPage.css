@@ -1,0 +1,71 @@
+.dollsPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.dollsPageContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.dollsHeading {
+  text-align: center;
+
+}
+.dollsHeading{
+  color: #e81a30;
+}
+
+.dollsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px;
+}
+
+.dollCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #222049;
+}
+
+.dollImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.filterContainer {
+  padding: 0 40px ;
+  border-right: 2px solid #fff;
+  margin: 50px;
+  justify-content: center;
+
+}
+.filterContainer button{
+  background-color: #222049;
+  color: #fff;
+  padding: 4px;
+  border-radius: 14%;
+  margin-top: 5vh;
+}
+
+.dollCard button{
+  background-color: #222049;
+  color:#fff;
+  border-radius: 10%;
+  padding: 4px;
+}
+
+.productName{
+  font-size: 1.2rem;
+}
