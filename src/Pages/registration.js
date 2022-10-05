@@ -56,22 +56,22 @@ const Register = () => {
                 <h1>SignUp</h1>
                 <label>Username</label>
                 <br />
-                <input type="text" name="username" placeholder='username' value={username} onChange={changeHandler} />
+                <input type="text" name="username" placeholder='username' value={username} onChange={changeHandler} required/>
                 <br />
                 <label>Email</label>
                 <br />
-                <input type="email" name="email" value={email} placeholder='example@gmail.com' onChange={changeHandler} />
+                <input type="email" name="email" value={email} placeholder='example@gmail.com' onChange={changeHandler} required />
                 <br />
                 <label>Password</label>
                 <br />
-                <input type="password" name="password" placeholder='password' value={password} onChange={changeHandler} />
+                <input type="password" name="password" placeholder='password' value={password} onChange={changeHandler} required/>
                 <br />
                 <label>Confirm Password</label>
                 <br />
-                <input type="password" name="confirmpassword" placeholder='confirm password' value={confirmpassword} onChange={changeHandler} />
+                <input type="password" name="confirmpassword" placeholder='confirm password' value={confirmpassword} onChange={changeHandler} required/>
                 <br />
                 <p>Already Have an Account <Link to="/login" >Login</Link></p>
-                <button class="signup-button">SignUp</button>
+                <button className="signup-button">SignUp</button>
                 <br />
             </form>
         </div >
