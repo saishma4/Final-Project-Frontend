@@ -5,6 +5,9 @@ import Login from './Pages/login';
 import DollsPage from './Pages/DollsPage';
 import DollDetailPage from './Pages/DollDetailPage';
 import CartPage from './Pages/CartPage';
+import Payment from './Pages/Payment';
+import About from './Pages/about';
+import Contact from './Pages/contact';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
         <Route path="/dolls" element={<DollsPage />} />
         <Route path="/dolls/:id" element={<DollDetailPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path='/payment'element={<Payment />}/>
+        <Route path='/aboutus' element={<About/>}/>
+        <Route path='/contactus' element={<Contact/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
