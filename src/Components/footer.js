@@ -6,17 +6,15 @@ const Footer = () =>{
     return(
     <>
     <div className="footer-container" >
-        <Link to="/" className="site-title">dollza</Link>
+        <p>&copy; 2022
+        <Link to="/">dollza</Link>
+        </p>
         <ul>
+            
             <li>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="/aboutus">about Us</a>
+                <a href="/contactus">contact Us</a>
             </li>
-            {/* <li>
-            <h3>5th Floor,"B" block,Divyasree Omega,Kondapur,Hyderabad,Telangana 500084,INDIA</h3>
-            <h3>Telephone:+914044721000</h3>
-            <h3>Email:dollza@gmail.com</h3>
-            </li> */}
         </ul>
     </div>
     </>

@@ -3,23 +3,9 @@ import './style.css';
 import { Link } from "react-router-dom";
 import WebFont from 'webfontloader';
 import { useEffect } from "react";
+import getCookie from "./utils";
 
 const Navbar = () => {
-    const getCookie = (cname) => {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) === 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
 
     const signoutHandler = () => {
         console.log("logout")
@@ -46,10 +32,9 @@ const Navbar = () => {
                     </div>
                     <ul>
                         <li>
-                            <a href="/dolls">Dolls</a>
-                            <a href="#">Orders</a>
-                            <a href="/cart">Cart</a>
-                            <a href="/" onClick={signoutHandler}>Logout</a>
+                            <a href="/dolls">dolls</a>
+                            <a href="/cart">cart</a>
+                            <a href="/" onClick={signoutHandler}>logout</a>
                         </li>
                     </ul>
                 </nav>
@@ -63,9 +48,9 @@ const Navbar = () => {
                     </div>
                     <ul>
                         <li>
-                            <a href="/dolls">Dolls</a>
-                            <Link to="/registration">Register </Link>
-                            <Link to="/login">Login</Link>
+                            <a href="/dolls">dolls</a>
+                            <Link to="/registration">register </Link>
+                            <Link to="/login">login</Link>
                         </li>
                     </ul>
                 </nav>
