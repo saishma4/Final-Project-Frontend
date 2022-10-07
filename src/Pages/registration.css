@@ -18,7 +18,7 @@
   }
   
   .signup-button {
-    background:#222049;;
+    background:#222049;
     float: right;
     border:none;
     border-radius: 10%;
@@ -42,4 +42,15 @@ input{
 }
 .register-container h1{
     color:#222049; 
+}
+.card-details p{
+  color: #222049;
+}
+.register-container h2{
+  color:#222049; 
+}
+
+.register-container button{
+  background-color: #222049;
+  color: #fff;
 }
