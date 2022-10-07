@@ -14,6 +14,7 @@ body{
 
 .site-title{
     font-size: 2rem;
+    letter-spacing: 2px;
 
 }
 
@@ -31,6 +32,7 @@ body{
     align-items: center;
     padding: 1rem;
     padding-bottom: 0;
+    letter-spacing: 2px;
 }
 .footer-container{
     background-color: #D3D3D3;
@@ -57,6 +59,7 @@ body{
     align-items: center;
     padding: 1rem;
     color: #e81a30;
+    letter-spacing: 2px;
 }
 .logo img{
     height: 10vh;
@@ -65,10 +68,7 @@ body{
 .logo{
     display: flex;
 }
-.footer-container h3{
-    list-style: none;
-    text-decoration: none;
-    text-decoration: none;
-    align-items: center;
+
+.footer-container p{
     color: #e81a30;
 }
