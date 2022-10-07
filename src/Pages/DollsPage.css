@@ -12,10 +12,9 @@
 
 .dollsHeading {
   text-align: center;
-
-}
-.dollsHeading{
   color: #e81a30;
+  letter-spacing: 2px;
+
 }
 
 .dollsList {
@@ -24,6 +23,7 @@
   flex-wrap: wrap;
   gap: 40px;
   margin: 50px;
+  padding-left: 5% ;
 }
 
 .dollCard {
@@ -68,4 +68,5 @@
 
 .productName{
   font-size: 1.2rem;
+  letter-spacing: 1.5px;
 }

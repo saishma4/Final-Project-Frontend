@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import './DollsPage.css';
 import axios from "axios";
+import getCookie from "../Components/utils";
 
 const DollsPage = () => {
 
   const [dolls, setDolls] = useState([]);
   const [error, setError] = useState(null);
+
+
 
   useEffect(() => {
     fetch("http://localhost:8080/api/auth/dolls")
@@ -21,13 +25,9 @@ const DollsPage = () => {
         }
       )
   }, [])
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    saveDoll(dolls)
-
-  }
-  const saveDoll = (doll) => {
-    axios.post("http://localhost:8080/api/auth/add_doll", doll.dollname,doll.price)
+  
+  const saveDoll = (data) => {
+    axios.post("http://localhost:8080/api/auth/add_doll",data)
       .then((response) => {
         console.log(response)
       })
@@ -40,9 +40,9 @@ const DollsPage = () => {
     <div className="dollsPage">
       <h1 className="dollsHeading">Dolls</h1>
       <div className="dollsPageContainer">
-        <div className="filterContainer">
+        {/* <div className="filterContainer">
           <button>Filter</button>
-        </div>
+        </div> */}
         <div className="dollsList">
           {dolls &&
             dolls.map((doll) => {
@@ -52,10 +52,13 @@ const DollsPage = () => {
                     src={doll.dollImage}
                     className="dollImage"
                   />
-                  <div>
-                    {doll.dollname} - Rs. {doll.price}/-
+                  <div className="productName">
+                    {doll.dollname}
                   </div>
-                  <button onClick={handleSubmit}>Add to cart</button>
+                  <div>
+                    Rs.{doll.price}
+                  </div>
+                  <Link to="/cart"><button onClick={()=>saveDoll(doll)}>Add to cart</button></Link>
                 </div>
               );
             })}
